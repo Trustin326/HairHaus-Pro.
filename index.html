@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HairHaus Pro | Tha DollHouse</title>
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<div class="container">
+
+<!-- HEADER -->
+<div class="topbar">
+<div class="brand">
+<div class="logo"></div>
+<div>
+<h3>HairHaus Pro</h3>
+<small>Tha DollHouse™ Salon Suite</small>
+</div>
+</div>
+
+<div class="badges">
+<span class="badge">trial</span>
+<span class="badge">guest</span>
+</div>
+</div>
+
+<!-- LANDING -->
+<div id="landing" class="grid">
+
+<div class="hero card">
+<h1>HairHaus Pro</h1>
+<h3>Luxury Salon Operating System</h3>
+
+<p>
+Run your salon like a brand — bookings, client memory,
+analytics, white-label branding built for modern stylists.
+</p>
+
+<button onclick="showLogin()">Enter Dashboard</button>
+
+<div class="pillRow">
+<span>Bookings</span>
+<span>Client Photos</span>
+<span>White Label</span>
+<span>Analytics</span>
+</div>
+
+</div>
+
+<div class="features card">
+<h2>Built For Real Stylists</h2>
+
+<div class="featureGrid">
+<div class="feature">Smart Booking</div>
+<div class="feature">Client Photo Memory</div>
+<div class="feature">Owner Analytics</div>
+<div class="feature">White Label Branding</div>
+</div>
+
+</div>
+
+<div class="imageRow">
+<img src="assets/img/stylists-grid.png">
+<img src="assets/img/hero-stylists.png">
+</div>
+
+</div>
+
+<!-- LOGIN -->
+<div id="loginScreen" class="hidden card loginCard">
+
+<h2>Login</h2>
+
+<input id="email" placeholder="Email">
+<input id="password" type="password" placeholder="Password">
+
+<button onclick="login()">Login</button>
+
+<p id="authMsg"></p>
+
+</div>
+
+<!-- APP DASHBOARD -->
+<div id="app" class="hidden">
+
+<h2>Dashboard</h2>
+<p id="userEmail"></p>
+
+<div class="grid">
+
+<!-- BOOKKEEPING -->
+<div class="card">
+<h3>Bookkeeping</h3>
+
+<input id="revInput" placeholder="Revenue">
+<button onclick="addRevenue()">Add Revenue</button>
+
+<input id="expInput" placeholder="Expense">
+<button onclick="addExpense()">Add Expense</button>
+
+<div class="stats">
+<div>Revenue <span id="revTotal">$0</span></div>
+<div>Expense <span id="expTotal">$0</span></div>
+<div>Profit <span id="profitTotal">$0</span></div>
+</div>
+</div>
+
+<!-- SOCIAL -->
+<div class="card">
+<h3>Social Post Builder</h3>
+
+<input type="file">
+<textarea id="postCaption"></textarea>
+
+<button onclick="savePost()">Save Draft</button>
+
+<div id="postList"></div>
+</div>
+
+<!-- NOTES -->
+<div class="card">
+<h3>Business Notes</h3>
+<textarea id="notes"></textarea>
+<button onclick="saveNotes()">Save</button>
+</div>
+
+<!-- CHECKLIST -->
+<div class="card">
+<h3>Checklist</h3>
+
+<input id="taskInput">
+<button onclick="addTask()">Add</button>
+
+<div id="taskList"></div>
+</div>
+
+</div>
+
+<button onclick="logout()">Logout</button>
+
+</div>
+
+</div>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
